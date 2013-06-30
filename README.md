@@ -1,7 +1,9 @@
 # Backbone Safe Sync [![Build Status](https://secure.travis-ci.org/amccloud/backbone-safesync.png)](http://travis-ci.org/amccloud/backbone-safesync]) #
+
 A wrapper around Backbone.sync to prevent model and collection request race conditions.
 
 ## Example ##
+
 ```javascript
 var bookSearch = new Books();
 
@@ -22,6 +24,7 @@ xhr2.state(); // 'pending'
 ```
 
 ## Why? ##
+
 Currently slow request can cause havok on the the state of your collections and models. Imagine this scenario:
 A user search for 'javascript' first and then 'dom'. The 'javascript' search hangs so the user never got to see
 the results. They then search for 'dom' and that response comes in right away while the 'javascript' search is still
